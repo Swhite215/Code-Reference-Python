@@ -1,0 +1,16 @@
+NumPy
+
+1. What - a library used for working with arrays
+2. Why - 50x speed improvement over working with traditional python lists
+3. Data Types
+    - i - integer
+    - b - boolean
+    - u - unsigned integer
+    - f - float
+    - c - complex float
+    - m - timedelta
+    - M - datetime
+    - O - object
+    - S - string
+    - U - unicode string
+    - V - fixed chunk of memory for other type
