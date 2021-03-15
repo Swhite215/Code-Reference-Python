@@ -1,0 +1,69 @@
+Introduction to Machine Learning Videos
+
+1. What is Machine Learning?
+    - Arthur Samuel 1950 - field of study that gives computers the ability to learn without being explicilty programmed
+    - Tom Mitchell 1998 - A well posed learning problem, a computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T , as measured by P, improves with experience E.
+        - Example - Classifying Emails
+            - Task - classifying email
+            - Experience - watching emails being labeled
+            - Performance - fraction of emails correctly classified as spam or not spame
+    - Machine Learning Algorithms
+        - Supervised Learning - teach computer how to do system
+        - Unsupervised Learning - let computer learn by itself
+        - Reinforcement Learning
+        - Recommender Systems
+    - Practical Experience - Best Advice
+2. Supervised Learning
+    - Essence - algorithm is provided dataset(s) with "right answers" given
+    - Problem - regression problem i.e. predict a continuous valued output
+    - Problem - classification problem i.e. predict a discrete valued output e.g. 0 or 1
+    - Example - Housing Prices
+        - Goal - predict housing prices based on size in square feet
+        - Type - regression
+        - Actions
+            - Linear Regression
+            - Polynomial Regression
+    - Example - Breast Cancer #1
+        - Goal - predict whether breast cancer is malignant or benign based on tumor size
+        - Type - classification
+    - Example - Breast Cancer #2
+        - Goal - predict whether breast cancer is malignant or benign based on tumor size AND age
+        - Type - classification
+        - Other Features - Clump thickness, uniformity of cell size, uniformity of cell shape
+    - Support Vector Machine - to be introduced soon, enables high number of features
+3. Unsupervised Learning
+    - Essence - algorithm is provided dataset with no labels or answers
+    - Problem - clustering problem i.e. grouping data into clusters
+    - Problem - cocktail party problem i.e. separate streams of data being summed, finding structure in a chaotic environment
+    - Example - News Articles
+        - Goal - Grouping related news articles
+        - Type - clustering
+    - Example - DNA Microarray Data
+        - Goal - Grouping individuals based on genes
+        - Type - clustering
+    - Example - Computing Clusters
+        - Goal - Organize computer clusters for optimacy
+        - Type - clustering
+    - Example - Social Network
+        - Goal - Identify cohesive groups based on social connections
+        - Type - clustering
+    - Example - Market Segmentation
+        - Goal - Discover market segments and groups based on market activity\
+        - Type - clustering
+    - Example- Astronomical Data
+        - Goal - Learn about formations of galleries
+        - Type - clustering
+X. Tools
+    - Octave
+    - Matlab
+X. Examples of Machine Learning
+    - Database Mining - large datasets from growth of automation/web
+    - Google Search
+    - Facebook or Apple's Photo Tagging
+    - Voice Assistants
+    - Autonomous Vehicles
+    - Handwriting Recognition
+    - Natural Language Processing - Applied ML
+    - Computer Vision - Applied ML
+    - Self Customizing Programs
+    - Understand Human Learning
