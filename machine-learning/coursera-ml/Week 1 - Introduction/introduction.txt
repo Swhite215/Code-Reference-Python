@@ -12,7 +12,8 @@ Introduction to Machine Learning Videos
         - Unsupervised Learning - let computer learn by itself
         - Reinforcement Learning
         - Recommender Systems
-    - Practical Experience - Best Advice
+    - Practical Experience - Best Advice|
+
 2. Supervised Learning
     - Essence - algorithm is provided dataset(s) with "right answers" given
     - Problem - regression problem i.e. predict a continuous valued output
@@ -31,6 +32,7 @@ Introduction to Machine Learning Videos
         - Type - classification
         - Other Features - Clump thickness, uniformity of cell size, uniformity of cell shape
     - Support Vector Machine - to be introduced soon, enables high number of features
+    
 3. Unsupervised Learning
     - Essence - algorithm is provided dataset with no labels or answers
     - Problem - clustering problem i.e. grouping data into clusters
@@ -53,6 +55,38 @@ Introduction to Machine Learning Videos
     - Example- Astronomical Data
         - Goal - Learn about formations of galleries
         - Type - clustering
+
+4. Model and Cost Function - Linear Regression with One Variable
+    - Linear Regression with One Variable or Univariate Linear Regression - h₀(x) = θ₀ + θ₁x
+    - Goal - given a training set, learn a function h: X -> Y, so that h(x) is a good predictor for corresponding value of y
+        - Important Notation
+            - m = number of training examples e.g. 47
+            - x = input variables or features e.g. size in feet
+            - y = output variables e.g. price
+            - x,y = a single training example
+            - (xi, yi) = the ith training example
+            - x[1] = 2104, y[1] = 460
+            - Training Set - Algorithm - Model h, h maps from x (size in feet) to y (estimated price)
+            - How do we represent h? h₀(x) = θ₀ + θ₁x
+        - Example
+            - Goal - Predict housing prices based on sizein square feet
+            - Learning - Supervised
+            - Problem - regression problem i.e. predict a continuous valued input
+            - Training Set - dataset of different housing prices
+    - Cost Function - Squared Error Cost Function
+        - More Terminology
+            - θ₀ and θ₁ = Parameters
+        - How do we choose θ₀ + θ₁ Parameters?
+            - If θ₀ = 1.5 and θ₁ = 0, hypothesis is straight line at 1.5
+            - If θ₀ = 0 and θ₁ = 0.5, hypothesis is line with slope of 0.5
+            - If θ₀ = 1 and θ₁ = 0.5, hypothesis is line with slop of 0.5 and y intercept of 1
+            - Choose θ₀and θ₁ so that h(x) is close to y for our training examples
+        - Squared Error Cost Function
+        - Goal - minimize J(θ₀, θ₁)
+    - Cost Function - Intuition I - Simplied
+        - h(x) is hypothesis, a function of x
+        - J(θ₁) is a function of θ₁
+
 X. Tools
     - Octave
     - Matlab
