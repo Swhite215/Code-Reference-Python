@@ -86,7 +86,25 @@ Introduction to Machine Learning Videos
     - Cost Function - Intuition I - Simplied
         - h(x) is hypothesis, a function of x
         - J(θ₁) is a function of θ₁
-
+    - Cost Function - Intuition II
+        - Finding algorithm that automatically minimizes J(θ₀, θ₁)
+        - Contour Plot - plot with many contour lines
+            - Contour Line - has a constant value at all points of the same line
+5. Parameter Learning
+    - Gradient Descent - minimizes any arbitrary function J(θ₀, θ₁)
+        - Actions
+            - Start with some θ₀, θ₁
+            - Keep changing θ₀, θ₁ to reduce J(θ₀, θ₁) until hopefully we end up at a minimum
+        - Question - how do we know we are in a local minimum vs the global minimum?
+        - Algorithm
+            - Compute derivative and then simulataneously update θ₀, θ₁
+    - Gradient Descent Intuition
+        - Derivative value is ultimately tangent of J(θ₀, θ₁), if tangent is positive, move left towards minimum, if tangent is negative, move right towards minimum
+        - Tips
+            - If alpha is too small, gradient descent is too slow
+            - If alpha is too large, gradient descrent can overshoot the minimum, fail to converge, or event diverge
+            - If already at local minimuim, no change, as slope is zero
+            - Repeat until derivative is equal to zero
 X. Tools
     - Octave
     - Matlab
