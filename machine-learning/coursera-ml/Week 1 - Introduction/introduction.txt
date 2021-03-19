@@ -36,7 +36,7 @@ Introduction to Machine Learning Videos
 3. Unsupervised Learning
     - Essence - algorithm is provided dataset with no labels or answers
     - Problem - clustering problem i.e. grouping data into clusters
-    - Problem - cocktail party problem i.e. separate streams of data being summed, finding structure in a chaotic environment
+    - Problem - cocktail party problem or principal component analysis i.e. separate streams of data being summed, finding structure in a chaotic environment
     - Example - News Articles
         - Goal - Grouping related news articles
         - Type - clustering
@@ -90,6 +90,7 @@ Introduction to Machine Learning Videos
         - Finding algorithm that automatically minimizes J(θ₀, θ₁)
         - Contour Plot - plot with many contour lines
             - Contour Line - has a constant value at all points of the same line
+
 5. Parameter Learning
     - Gradient Descent - minimizes any arbitrary function J(θ₀, θ₁)
         - Actions
@@ -105,9 +106,26 @@ Introduction to Machine Learning Videos
             - If alpha is too large, gradient descrent can overshoot the minimum, fail to converge, or event diverge
             - If already at local minimuim, no change, as slope is zero
             - Repeat until derivative is equal to zero
+    - Gradient Descent for Linear Regression
+        - Local Optima Issue - Cost Function for Linear Regression is always Convex Function
+        - Batch Gradient Descent - each step of gradient descent uses all the training examples
+        - Normal Equation Method - Find global minimum of cost function
+
+6. Linear Algebra Review
+    - Matrices - rectangular array of numbers
+        - Dimension - row x columns
+        - Elements - Aᵢⱼ is rowᵢ x columnⱼ
+        - Matrix A, B, C
+    - Vectors - special case of a matrix, only one column i.e. n x 1
+        - 1D - 1 element, 2D - 2 elements, 3D - 3 elements, etc.
+        - Elements - yᵢ is ᵢth element
+        - Index - 1 indexing vs 0 indexing
+        - Vector a, b, c
+
 X. Tools
     - Octave
     - Matlab
+
 X. Examples of Machine Learning
     - Database Mining - large datasets from growth of automation/web
     - Google Search
