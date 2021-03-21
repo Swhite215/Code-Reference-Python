@@ -121,7 +121,18 @@ Introduction to Machine Learning Videos
         - Elements - yᵢ is ᵢth element
         - Index - 1 indexing vs 0 indexing
         - Vector a, b, c
-
+    - Matrix Algebra
+        - Addition/Subtraction - Straight Across
+        - Scalar Multiplication/Division - Each Element
+        - Matrix Multiplication - Row Elements Times Column Elements Then Sum
+    - Properties
+        - Commutative AxB != BxA
+        - Associative AxBxC = (AxB)xC or Ax(BxC)
+        - Identity Matrix
+    - Special Matrix Operations
+        - Matrix Inverse - multiply by inverse to get identity matrix, only square matrices have inverses
+            - Finding Inverse - numerical software e.g. Octave pinv()
+        - Transpose - Convert Rows to Columns
 X. Tools
     - Octave
     - Matlab
