@@ -1,0 +1,12 @@
+Multivariate Linear Regression
+
+1. Multivariate Linear Regression
+    - Multiple Features
+        - Example - house price based on number of bedrooms, age of house, size of home
+        -  Terms
+            - m - number of rows
+            - n - number of features
+            - Xᵢ - feature
+            - Xⁱ - vector of features for specific training example
+        - New Hypothesis - h(x)  = θ₀X₀ + θ₁Xᵢ + ... + θnXn
+            - θTX - row vector parameters times vector of x's
