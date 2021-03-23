@@ -10,3 +10,43 @@ Multivariate Linear Regression
             - Xⁱ - vector of features for specific training example
         - New Hypothesis - h(x)  = θ₀X₀ + θ₁Xᵢ + ... + θnXn
             - θTX - row vector parameters times vector of x's
+    - Gradient Descent for Multiple Variables
+    - Gradient Descent in Practice 1: Feature Scaling
+        - Feature Scaling
+            - Problem - multiple features
+            - Idea - make features on similar scale
+            - Goal - get every feature into approximately a -1 ≤ Xᵢ ≤ 1 range
+            - Action - divide each value by maximum value
+            - Example
+                - House Size - size/maximum i.e. size/2000
+                - Bedrooms - bedrooms/maximum i.e. bedrooms/5
+            - Rule - -3 to +3
+        - Mean Normalization
+            - Replace Xᵢ with uᵢ (average value of Xᵢ in training set) to make features have approximately zero mean
+            - Action replace Xᵢ with (Xᵢ - uᵢ)/ Sᵢ where Sᵢ is the max-min range or standard deviation
+            - Example
+                - House Size - (size - 1000) / 2000
+                - Bedrooms - (bedrooms - 2) / 5
+    - Gradient Descent in Practice II: Learning Rate
+        - Debugging - How to make sure gradient descent is working correctly
+            - Job - find theta that minimizes the cost function
+            - Action - plot cost function as gradient descent runs (per iteration)
+            - Observation: cost function should decrease after every iteration
+            - Observation: when changes reduce/plateau, indicator of convergence 
+        - Automatic Convergence Test - declare convergence is cost function decreases by less than 10^-3 in one iteration (difficult)
+        - Choosing Alpha
+            - Increasing or Cycling then alpha may be too large
+            - Gradient descent moving extremely slow, alpha may be too small
+            - Try alpha as ... , 0.0001, .0003, 0.01, .03, 0.1, .3, 1, ...
+    - Features and Polynomial Regression
+        - Combine Features
+            - Example - Predicting Price of House
+                - Frontage - width of home lot
+                - Depth - depth of home lot
+                - Extra/United Feature - Area - width x depth of home lot
+        - Polynomial Regression - Change Features to Different Functions
+            - Set x as feature squared, cubed, etc
+            - Issue - Feature Scaling
+                - size = 1 - 1000
+                - size^2 = 1 - 1000000
+                - size ^3 = 1 - 10^9
