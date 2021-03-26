@@ -50,3 +50,18 @@ Multivariate Linear Regression
                 - size = 1 - 1000
                 - size^2 = 1 - 1000000
                 - size ^3 = 1 - 10^9
+    - Normal Equation
+        - Method to solve for theta analytically
+        - Octave - θ = pinv(X`*X)*X`*y
+        - Feature Scaling isnt necessary with Normal Equation
+        - When
+            - Gradient Descent - need to choose alpha, need many iterations, works well even if n is large
+            - Normal Equation - no need to chose alpha, don't need to iterate, n is not every large
+    - Normal Equation Noninvertibility
+        - Some matrices do not have an inverse and are considered non-invertible.
+        - Octave θ = pinv(X`*X)*X`*y will do the right thing
+            - Octave has two functions for inverting matrices pinv and inv
+        - Causes for Non-Invertibility
+            - Redundant Features
+            - Training the algorithm with too many features m <= n
+            - Actions - delete some features or use regularization
