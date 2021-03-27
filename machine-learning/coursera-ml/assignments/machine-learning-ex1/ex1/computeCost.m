@@ -14,8 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
-
-
+predictions = X*theta; % Predictions of Hypothesis on All M Examples
+sqrErrors = (predictions - y).^2; % Squared Errors
+J = 1/(2*m) * sum(sqrErrors);
 
 % =========================================================================
 
