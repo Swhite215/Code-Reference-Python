@@ -1,0 +1,44 @@
+Logistic Regression
+
+1. Logistic Regression
+    - Classification (Binary Classification)
+        - Goal - variable y that you want to predict is discrete valued i.e 0 or 1
+        - Examples
+            - Email - spam/not spam
+            - Online Transactions - fraudulent Y/N
+            - Tumors - malignant/benign
+        - Classes
+            - 0 - Negative Class (Absence)
+            - 1 - Positive Class (Presence)
+        - Future - Multi-Class Problems e.g. y is 0,1,2,3,4
+        - Threshold Classifier
+            - if hypothesis >= 0.5 then predict y = 1
+            - if hypothesis < 0.5, then predict y = 0
+        - Issue with Linear Regression - hypothesis can be greater than 1 or less than 0
+    - Hypothesis Representation
+        - Desire - predictions are between 0 and 1
+        - Modified Hypothesis g(theta transpose X)
+        - Sigmoid/Logistic Function: g(z) = 1 / (1 + e^-7)
+        - Hypothesis h(x) = 1 / (1 + e^-theta'x)
+        - Interpretation of Hypothesis Output
+            - Treat h(x) as the estimated probability that y = 1 on input x e.g. h(x) = .7 means 70% chance of being malignant
+            - h(x) = P(y = 1 | x; theta) i.e. probability that y = 1, given x, parameterized by theta
+            - P(y = 0 | x; theta) = 1 - P(y = 1 | x; theta)
+    - Decision Boundary
+        - if hypothesis >= 0.5 then predict y = 1
+        - if hypothesis < 0.5, then predict y = 0
+        - g(z) >= .5 when Z >= 0 which means g(theta'x) >= 0.5 when theta'x >= 0
+        - g(z) < .5 when Z < 0 which means g(theta'x) < 0.5 when theta'x < 0
+        - Example
+            - hypothesis = g(theta0 + theta1X1 + theta1X2)
+            - theta0 = -1, theta1 = 1, theta2 = 1
+            - theta = [-3; 1; 1]
+            - y = 1 if -3+x1+x2 >= 0
+            - Rewrite as x1 + x2 >= 3
+            - Plot x1 + x2 = 3 as a line
+            - Region above line is where hypothesis will predict 1
+            - Region below line is where hypothesis will predict 0
+            - x1 + x2 = 3 Line is decision boundary that is where hypothesis prediction is 0.5
+            - Decision Boundary is property of hypothesis
+        - Can be linear, circular, elliptical, etc.
+        - Important - Decision boundary is a property of the hypothesis, not the data
