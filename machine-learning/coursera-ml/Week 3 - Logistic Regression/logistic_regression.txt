@@ -1,6 +1,6 @@
 Logistic Regression
 
-1. Logistic Regression
+1. Logistic Regression Concepts
     - Classification (Binary Classification)
         - Goal - variable y that you want to predict is discrete valued i.e 0 or 1
         - Examples
@@ -42,3 +42,23 @@ Logistic Regression
             - Decision Boundary is property of hypothesis
         - Can be linear, circular, elliptical, etc.
         - Important - Decision boundary is a property of the hypothesis, not the data
+
+2. Logistic Regression Model
+    - How to choose parameters theta?
+    - Cost Function
+        - IMAGE: logistic_cost_function.png
+    - Simplified Cost Function and Gradient Descent
+        - IMAGE: compressed_cost_function.png
+        - IMAGE: compressed_vectorized_cost_function.png
+        - IMAGE: gradient_descent.png
+        - IMAGE: vectorized_gradient_descent.png
+    - Advanced Optimization
+        - Gradient Descent - Option
+        - Conjugate Gradient
+        - BFGS
+        - L-BFGS
+        - Advantages
+            - No need to manually pick alpha
+            - Often faster than gradient descent
+        - Disadvantages
+            - More complex
