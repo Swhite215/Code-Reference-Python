@@ -62,3 +62,31 @@ Logistic Regression
             - Often faster than gradient descent
         - Disadvantages
             - More complex
+
+3. Multiclass Classification Problem
+    - Objective - assigning to multiple class
+        - Examples
+            - Type of folder - work, friends, family, hobby
+            - Medical Status - cold, flu, healthy
+            - Weather - sunny, cloudy, rain, snow
+    - One-vs-All - Implementation
+        - Convert to Binary Classification for Each Class - Class vs. Other
+        - Action - Run all three classifiers and pick the class that maximizes prediction/probability
+
+4. The Problem of Overfitting
+    - Fitting Issues
+        - Underfitting - High Bias - not fitting training data very well
+        - Overfitting - High Variance - space of possible hypothesis is too variable, too many features
+    - Addressing Overfitting
+        - Reduce number of features - manually or using model selection algorithms
+        - Regularization - keep all features but reduce magnitude/values of parameters thetaj
+    - Cost Function
+        - Intuition - Penalize parameter values to reduce effect, large coefficients to produce smaller theta values
+        - Regularization - having small values for the parameters produces a simpler hypothesis
+            - Penalizing all parameters produces simpler hypothesis and less prone to overfitting
+            - Modify cost function to add term at the end for all parameter values
+            - Regularization Term - keep parameters small
+            - Lambda - Regularization Parameter - control trade between fitting test data and keeping parameters small
+        - Note - if lambda is very large, we begin penalizing theta parameters, leading them to be 0, which causes underfitting on the training data
+    - Regularized Linear Cost Function - lir_gd_regularization.png and ne_regularization.png
+    - Regularized Logistic Regression - lor_gd_regularization.png
