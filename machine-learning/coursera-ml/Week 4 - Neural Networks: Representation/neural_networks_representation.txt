@@ -1,0 +1,45 @@
+Neural Networks - Representation
+
+1. Motivations
+    - Non-Linear Hypotheses
+        - Non-Linear Classification
+            - Logistic Regression w/ Non-Linear Features
+                - Works well with low number of features
+        - Example - Determining Image Category
+        - Issue - Learning Complexity Non-Linear Hypotheses with High Number of Features
+    - Neurons and the Brain
+        - Origins - algorithms trying to mimic the brain, widely used in 80s and 90s, began to diminish, recent resurgence
+        - One Learning Algorithm Hypothesis - Neuro-rewiring
+            - Auditory Cortex Learns to See (Hearing -> Seeing)
+            - Somatosensory Cortext Learns to See (Touching -> Seeing)
+        - Examples
+            - Seeing with Tongue
+            - Human Echolocation
+            - Haptic Belt
+            - Third Eye
+
+2. Neural Networks
+    - Model Representation - Simulation of Neuron/Network of Neurons
+        - Neuron in Brain
+            - Input Wires - Dendrite
+            - Brain - Nucleus - Perfoms Operation
+            - Output Wire - Axon
+            - Messages = Pulse of Electricity
+        - Neuron Logistic Unit - 
+            - x1 - xn inputs
+            - Operation
+            - output - hypothesis - h(x) - sigmoid (logistic) activation function
+            - x0 - bias unit
+            - weights = parameters
+        - Neural Network
+            - Group of Neuron Logistic Units
+            - Layer 1 - Input Layer for Features
+            - Layer In-Between - Hidden Layer - Activation Units
+            - Final Layer - Output Layer
+        - Neural Network Computational Steps
+            - Activation of Unit I in Layer J aij
+            - ThetaJ - matrix of weights controlling function mapping from layer j to layer j + 1
+            - Dimensions - If network has sj units in layer j, sj+1 units in layer j + 1, then thetaJ will be of dimension sj+1 x (sj+1)
+    - Model Representation II
+        - Forward Propagation - Vectorized Implementation
+        - Input -> Hidden Layers -> Output Layer
