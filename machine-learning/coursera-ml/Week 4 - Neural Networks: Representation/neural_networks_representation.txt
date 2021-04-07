@@ -43,3 +43,14 @@ Neural Networks - Representation
     - Model Representation II
         - Forward Propagation - Vectorized Implementation
         - Input -> Hidden Layers -> Output Layer
+
+3. Applications
+    - Examples and Intuitions I
+        - Non-Linear Classification: XOR/XNOR
+        - Neural Network for AND
+        - Neural Network for OR
+    - Examples and Intuition II
+        - Neural Network for Negation NOT
+        - Neural Network for Negation NOT AND NOT
+    - Multiclass Classification
+        - Make result vector with 1 position indicating class
