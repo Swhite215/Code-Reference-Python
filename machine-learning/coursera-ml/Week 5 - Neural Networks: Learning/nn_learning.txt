@@ -1,0 +1,12 @@
+Neural Networks - Learning
+
+1. Cost Function and Backpropogation
+    - Cost Function
+        - Binary Classification - one output unit with output of h(x) is real number
+        - Multiclass Classification - output vectors that are k-dimensional
+         - Logistic Regression with Lambda Regularization Term
+    - Backpropogation Algorithm - minimize the cost function
+        - Given one training example (x,y)
+            - Forward Propogation
+        - Backpropogation
+    - Backpropogation Intuition
