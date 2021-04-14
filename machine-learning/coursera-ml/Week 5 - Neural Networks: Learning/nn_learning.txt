@@ -10,3 +10,34 @@ Neural Networks - Learning
             - Forward Propogation
         - Backpropogation
     - Backpropogation Intuition
+
+2. Backpropogation in Practice
+    - Implementation Note: Unrolling Parameters
+        - Have Initial Theta Parameters - Theta1, Theta2, Theta3
+        - Unroll to get Initial Theta to pass to fminunc(@costfunction, initialTheta)
+        - From ThetaVec, get back Theta1, Theta2, Theta2
+        - Use Forward/Back Propogation to compute Derivatives and Cost Function J(Theta)
+        - Take Derivatives and Unroll to get gradientVec
+    - Gradient Checking
+        - gradApprox = J(Theta + Epsilon) - J(Theta - Episolon) / 2epsilon - estimate of gradient/derivative
+        - Notes
+            - Implement Backpropogation to compute DVec, unrolled version of derivative matrices
+            - Implement numerical gradient check to compute gradApprox
+            - Make sure DVec and gradApprox give similar values
+            - Turn off gradient checking, use backprop code for learning
+    - Random Initialization of Theta Values/Vector
+        - Avoid Zero Initialization / Symmetric Weights = Computing All Features as One Feature
+        - Goal - Symmetry Breaking
+    - Putting it All Together
+        - #1 - Pick network architecture ( 3I -> 5Hx1 -> 4O or 3I -> 5Hx2 -> 4O)
+            - Input Units - Dimension of features
+            - Output Units - Number of classes (1-10) - rewrite as vectors
+            - Reasonable Default - 1 hidden layer or if layer > 1, same no of hidden units in every layer
+        - #2 - Training a Neural Network
+            - Randomly initialize weights
+            - Implement forward propogation to get h(x) for any x
+            - Implement code to compute cost function
+            - Implement backprop to compute partial derivatives
+            - Use gradient checking to compare partial derivatives produces using backprop vs. numerical estimate of gradient
+            - Disable gradient checking code
+            - Use gradient descent or advanced optimization method with backprop to try to minimize cost function as a function of parameters theta
