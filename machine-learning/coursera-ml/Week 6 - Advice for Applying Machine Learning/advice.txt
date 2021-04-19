@@ -1,0 +1,63 @@
+Machine Learning Advice
+
+1. Evaluating a Learning Algorithm
+    - Deciding What to Try Nexts
+        - Situation - linear regression making error in predicting housing prices
+        - Actions
+            - Obtain more training examples
+            - Try smaller set of features
+            - Try getting additional features
+            - Try adding polynomial features
+            - Try decreasing lambda/regularization variable
+            - Try increasing lambda/regularization variable
+        - Special Technique - filters what options are worth pursuing
+            - Machine Learning Diagnostic - test to run to gain insight into what is or isn't working with a learning algorithm
+    - Evaluating a Hypothesis
+        - Failure to Generalize/Overfitting Issue
+            - Hard/Impossible to plot hypothesis
+        - Method #1
+            - Split data into two portions - Training Set and Testing Set 80%-20%, Randomize
+            - If overfitting, expect training accuracy to be high and testing to be low
+            - Procedure for Linear Regression
+                - Learn parameters theta from training set of 70-80%
+                - Compute test set error, take learned theta and plug into test set cost function
+            - Procedure for Logistic Regression
+                - Learn parameters theta from training set of 70-80%
+                - Compute test set error, take learned theta and plug into test set cost function
+                - Misclassification error (0/1 missclassification error)
+                    - if h(x) >= 0.5 and y = 0 m - ERROR
+                    - if h(x) < 0.5 and y = 1 - ERROR
+                    - 0 if correct
+        - IMPORTANT - performance on training set doesnt necessarily correctly estimate with new data
+    - Model Selection and Train/Validation/Test Sets
+        - Model Selection Problem - linear, quadratic, cubic, higher order polynomial
+            - Issue Path
+                - Use different models, generate theta, pass theta to test set to determine test set error
+                - Issue - performance on hypothesis to test set is bias as we selected the order based on test set
+            - Best Action for Model Selection
+                - Split dataset into three groups - training, cross validation, test set - 60%-20%-20%
+                - Train Error, Cross Validation Error, Test Error
+                - Procedure
+                    - Take 1st hypothesis and minimize cost function to return parameter theta
+                    - Take nth hypothesis and minimize cost function to return parameter theta
+                    - Test hypothesis on cross validation set to see how well each hypothesis does
+                    - Pick hypothesis with lowest cross validation error to determine model and degree
+                    - Estimate the generalization error using the theta that performed the best on the cross validation set
+
+2. Bias vs. Variance
+    - Diagnosing Bias vs. Variance
+        - Definitions
+            - Bias - underfitting the data
+            - Just Right
+            - Variance - overfitting the data
+            - Training Error - should decrease as polynomial increases
+            - Cross Validation Error - high low degree and high high degree, just right with mid degree
+        - Is it Bias vs. Variance?
+            - Cross Validation High w/ Low Order = High Bias Problem
+                - Both cross validation and training error are going to be high
+            - Cross Validation High w/ High Order = High Variance Problem
+                - Cross validation error is high and training set error are low
+    - Regularization and Bias/Variance
+        - Large Lambda - High Bias - Underfit
+        - Small Lambda - High Variance - Overfit
+    
