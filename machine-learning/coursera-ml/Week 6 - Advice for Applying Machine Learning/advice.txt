@@ -60,4 +60,49 @@ Machine Learning Advice
     - Regularization and Bias/Variance
         - Large Lambda - High Bias - Underfit
         - Small Lambda - High Variance - Overfit
-    
+        - Action
+            - Try Lambda at 0, .01, .02, .04, .08 ... 10.24s (12)
+            - Take 1st Model with Lambda at 0 -> Minimize Cost Function J(Theta)
+            - Take 2nd Model with Lambda at .01 -> Minimize Cost Function J(Theta)
+            - Take Nth Model with Lambda at Value -> Minimize Cost Function J(Theta)
+            - For every hypothesis -> Send to cross validation set to find cv error
+            - Pick whichever model gives lowest error on cv set
+            - Take model and look at how well it does on test set
+        - Bias/Variance as a Function of Regularization Parameter Lambda
+            - JTrain Theta - increase as lambda increases i.e. high bias as lambda increases
+            - Cross Validation Error - large lambda underfit cross validation set, small lambda overfit cross validation set
+            - Goal - low cross validation error
+    - Learning Curves
+        - Action
+            - Plot JTrain - average square error on training set
+            - Plot JCV - average square error on cross validation set
+            - Plot training set size (x) by error (y), reduce training set size
+            - m = 1,2,3 error on training set ~0
+            - As training set size grows, average training set error grows
+            - As training set size grows, average cross validation set error decreases
+            - High Bias - as training set size grows, cross validation error decreases, training error increases, cv and training approach each other, high error
+            - Insight - if a learning algorithm is suffering from high bias, getting more training data will not by itself help much
+            - High Variance - as training set size grows, train error increases, cross validation error decreases but remains high
+            - Insight - if a learning algorithm is suffering from high variance, getting more training data is likely to help
+    - Deciding What to Do Nextw
+        - Issue - Regularized Linear Regression fails to predict
+        - Actions
+            - Get more training examples - useful if high variance (cross validation error > training set error)
+            - Try smallest set of features - useful if high variance
+            - Try getting additional features - use if high bias
+            - Try adding polynomial featurs - use if high bias
+            - Try decreasing lambda - fixes high bias
+            - Try increasing lambda - fixes high variance
+        - Relating to Neural Networks
+            - Underfitting - small neural network, small/few hidden layers, fewer parameters, more prone to underfitting
+            - Overfitting - large nueral network, large/many hidden layers, more parameters, more prone to overfitting
+
+3. Building a Spam Classifier
+    - Prioritizing What to Work On
+        - Supervised Learning - x = features of email, y = spam(1) or not spam(0), choose 100 words indicative of spam/not spam
+        - Convert email to feature vector by taking feature words and creating vector that indicates whether feature word appears in the email
+        - How to spend your time to make it have low error?
+            - Collect lots of data - not necessarily all the time
+            - Develop sophisticated features based on email routing information
+            - Develop sophisticated features for message body
+            - Develop sophisticated algorithms to detect misspellings
