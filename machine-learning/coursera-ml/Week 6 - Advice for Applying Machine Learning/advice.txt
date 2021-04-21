@@ -106,3 +106,58 @@ Machine Learning Advice
             - Develop sophisticated features based on email routing information
             - Develop sophisticated features for message body
             - Develop sophisticated algorithms to detect misspellings
+    - Error Analysis
+        - Start with a simple algorithm you can implement quickly, implement and test it on cross validation set
+        - Plot learning curves to decide if more data, more features, etc are likely to help
+        - Error Analysis - manually examine the examples in cross validation set that your algorithm made errors on. See if you spot any systematic trend in what type of examples it is making errors on
+            - 500 Examples, Algorithm Misclassifies 100
+                - Manually examine, what type of email it is
+                - What features you think would have helped the algorithm classify them correctly
+        - Ensure you have numerical evaluation of learning algorithm
+
+4. Handling Skewed Data
+    - Skewed Classes - more examples from one class than the other class
+    - Precision/Recall
+        - True Positive - Actual = 1 and Predicted = 1
+        - False Positive - Actual = 0 and Predicted = 1
+        - False Negative - Actual = 1 and Predicted = 0
+        - True Negative - Actual = 0 and Predicted = 0
+        - Precision - True Positives / Predicted Positives (Sum of True Positive and False Positive) - High Precision means low false positives, clsoe to 1
+        - Recall - True Positives / Actual Positives (Sum of True Positives and False Negatives)
+        - Using Precision and Recall - High both suggests algorithm is doing well even if we have skewed classes
+    - Trading Precision and Recall
+        - Improve confidence by changing threshold of classification - high precision, lower recall, higher fraction will turn out to have cancer
+        - Decrease confidence by changing threshold of classification - lower precision, higher recall, higher fraction will turn out not to have cancer
+        - High Precision Low Recall - high threshold = high confidence
+        - Low Precision High Recall - low threshold = low confidence
+        - How to compare precision/recall numbers?
+            - Algorithm 1 - P = 0.5 and R = 0.4
+            - Algorithm 2 - P = 0.7 and R = 0.1
+            - Algorithm 3 - P = 0.02 and R = 1.0
+            - Options
+                - Look at highest averge value - could end up with extremes - not great choice
+                - F1 Score - 2 (PR)/(P+R)
+
+5. Using Large Data Sets
+    - Data for Machine Learning
+        - How much data to train on?
+        - Story
+            - Designing a High Accuracy Learning System
+                - Algorithms vs. Data Sizes
+                - Problem - classifying between confusable words e.g. (to, two, too) and (then, than)
+                - Algorithms
+                    - Perceptron (Linear Regression)
+                    - Winnow
+                    - Memory-Based
+                    - Naive Bayes
+                - Action
+                    - Varied training set size and tried out each algorithm
+                - Insight 
+                    - Most algorithms gave similar peformance
+                    - As training set size increases, accuracy tends to increase
+                    - "Its not who has the best algorithmn that wins, its who has the most data"
+                - Assumptions
+                    - Large Data Rationale
+                        - Assume features x has sufficient information to predict y accurately
+                        - Useful test: given the input x, can a human expert confidently predict y?
+                        - Training Error Small, Use Large Training Set with Many Parameters (Features or Hidden Units), Test Error Small, Low Bias, Low Variance
