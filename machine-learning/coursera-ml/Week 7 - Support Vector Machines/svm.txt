@@ -1,0 +1,30 @@
+Support Vector Machines
+
+1. Large Margin Classification
+    -  Alternate View of Logistic Regression
+        - Hypothesis -> Sigmoid Function
+            - y = 1, hypothesis ~ 1, z > 0
+            - y = 0, hypothesis ~ 0, z < 0
+        - Cost Function
+            - y = 1, only first portion of cost function matters, z is large, small value of cost function
+            - y = 0, only second portion of cost function matters, z is small, small value of cost function
+            - Cost₁(z) and Cost₀(z)
+        - Support Vector Machine - Take Logistic Regression, replace with Cost₁(z) and Cost₀(z) functions
+            - Removing 1/m, doesn't change what minimizes the function
+            - Switch from A + Lambda B to CA + B, C = 1/Lambda
+        - Support Vector Machine Hypothesis - Outputs - 1 or 0
+    - Large Margin Intuition
+        - Cost₁(z) is >= 1, then y = 1
+        - Cost₀(z) is <= -1, then y = 0
+        - Imagine we set C to a large value e.g. 100,000
+            - When minimizing, will focus on getting first term equal to zero
+            - Minimize Cx) + 1.2 sum(theta squared j)
+        - Decision Boundary - Linearly Separable Case
+            - Line has larger and more equal margin between positive and negative classes
+        - C Intuition
+            - When large, margin is smaller
+            - When small, margin is larger
+
+2. Kernels
+
+3. SVMs in Practice
