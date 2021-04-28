@@ -24,7 +24,32 @@ Support Vector Machines
         - C Intuition
             - When large, margin is smaller
             - When small, margin is larger
+    - Mathematics Behind Large Margin Classification
+        - Objective - setting of parameters where the norm of theta is small
 
 2. Kernels
-
+    - Kernels I
+        - Kernel - technique for developing complex nonlinear classifiers using SVM
+            - Choose Landmark, Use for Similarity Function (Kernel i.e. Gaussian Kernel)
+            - If x is closed to landmark, feature will be close to 1
+            - If x is far from landmark, feature will b eclose to 0
+            - As sigma squared decreases, feature drops to zero quickly
+            - As sigma squared increases, feature drop to zero more slowly
+            - Compute Features
+                - Hypothesis is 1 when features with theta >= 0
+                - Hypothesis is 0 when feature with theta <= 0
+    - Kernels II
+        - Where do we get landmarks from?
+            - Given a machine learning problem with some data set, for every training example (Xi, Yi), replace with landmark, ending with m landmarks
+            - Given an example x, compute feature vector, feature is similairty between Xi and Li
+            - Predict y = 1 if Thetaᵀf >= 0
+            - Training - Minimize Cost Function using Thetaᵀf
+        - Bias and Variance Trade Off
+            - Must choose parameter C
+                - Large C: Lower Bias and Higher Variance
+                - Small C: Higher Bias and Lower Variance
+            - Must Choose Sigma
+                - Large Sigma - Features vary more slowthy, so higher bias and lower variance
+                - Small Sigma - Features vary less smoothly, so lower bias and higher variance
+                
 3. SVMs in Practice
