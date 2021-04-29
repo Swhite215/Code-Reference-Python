@@ -51,5 +51,25 @@ Support Vector Machines
             - Must Choose Sigma
                 - Large Sigma - Features vary more slowthy, so higher bias and lower variance
                 - Small Sigma - Features vary less smoothly, so lower bias and higher variance
-                
+
 3. SVMs in Practice
+    - Using a SVM
+        - Use SVM Software Package - liblinear, libsvm, ... to solve for parameters theta
+        - Choice of Parameter C
+        - Choice of Kernel
+            - No Kernel - linear kernel, predict y = 1, n large features and m small number of examples
+            - Gaussian Kernel - n small number of features and m large training examples, fit more complex non linear boundary
+                - Need to choose sigma^2
+                - Implement similarity function to compute feature value
+                - Perform feature scaling before using Gaussian Kernel
+            - Polynomial Kernel
+            - String Kernel
+            - Chi-Square Kernel
+            - Histogram Intersection Kernel
+        - Multi-Class Classification
+            - Train K SVMs, one to distinguish y = i from the rest, predict the class i with the lragest theta transpose x
+        - Logistic Regression vs. SVMs
+            - If n is large, n >= m, n = 10,000 and m = 1 ... 1000, then use logistic regression or SVM without a kernel (linear kernel)
+            - If n is small and m is intermediate, n = 1 ... 1000, and m = 10 ... 10,000, then use a SVM with Gaussian Kernel
+            - If n is small and m is large, Create/add more features, then use logistic regression or SVM without a kernel
+        - Neural Network - likely to work well, but may be slower to train
