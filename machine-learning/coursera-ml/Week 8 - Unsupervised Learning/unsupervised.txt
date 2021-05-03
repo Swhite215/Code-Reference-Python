@@ -1,0 +1,55 @@
+Unsupervised Learning
+
+1. Clustering
+    - Introduction
+        - Unsupervised Learning - dataset with no associated labels
+        - Action - with unlabeled dataset, find some structure
+        - Clustering Algorithm - finds groups, patterns, of data
+        - Use - market segmentation, social network analysis, computer clusters, astronomical data analysis
+    - Clustering K-Means Algorithm
+        - Order
+            - Provide unlabeled data
+            - Randomly initialize two points called the cluster centroids (# based on groupds)
+            - Cluster Assignment Step
+                - Go through each example of the training data, depending on closer to which centroid, assign data point to centroid
+            - Move Centroid Step
+                - Take two cluster centroids and move them to the average of the points colored the same color
+            - Repeat Cluster Assignment and Move Centroid
+            - Continue Until Centroid Position Stops Moving
+        - K Means Algorithm
+            - K (Number of Clusters)
+            - Training Set {x1, x2, ..., xn}
+            - First Step - randomly initialize K cluster centroids (u1, u2, u3)
+            - Repeat
+                - for i = 1 to m training examples - cluster assignment
+                    - c = index (from 1 to K) of cluster centroid closest to xi
+                - for k = 1 to K - move centroid
+                    - u = average of points assinged to cluster k (x1 + x3 + x5 + x7 / 4)
+        - What if cluster centroid has no assigned values?
+            - Remove cluster centroid
+            - Randomly reinitialize cluster centroid
+        - K-Means for Non-Separated Clusters
+            - T-Shirt Sizing - Height and Weight of People - Want to Size T-Shirts (S, M, L) - How Big Should Shirts Be?
+    - Clustering Optimization Objective
+        - Important Data
+            - Tracking ci, index of cluster to which example is currently assigned
+            - uk, location of cluster centroid k
+            - uci, cluster centroid of cluster to which example xi has been assigned
+        - Cost Function - Distortion
+            - J(c1, ..., cm, u1, ..., uk) = 1/m SUM(Distance(xi - cluster)^2)
+            - #1 Minimizing J() with respect to variables c1, c2, c3, while holding u1,...,uk fixed
+            - #2 Minimizing J() with respect to variables u1, ..., uk
+            - Repeat
+    - Random Initialization
+        - K, number of cluster centroids, should be less than m examples
+        - Randomly pick K training examples, set u1, ..., uk equal to these K examples
+        - It is possible to get stuck in local optima of distortion function
+        - To avoid getting stuck, run k means and initialization multiple times (50-1000)
+    - Choosing the Number of Clusters
+        - Sometimes it is genuinely ambiguous how many clusters there are
+        - Elbow Method
+            - K number of clusters vs Cost Function
+            - Pattern, distortion goes down rapidly, then elbow, then distortion goes down more slowly
+            - Issue - curve is normally ambiguous
+        - Evaluate K means based on a metric for how well it performs for a later purpose
+            - T-Shirts - pick number of t-shirt sizes you are interested in making
