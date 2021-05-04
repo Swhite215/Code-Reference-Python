@@ -53,3 +53,46 @@ Unsupervised Learning
             - Issue - curve is normally ambiguous
         - Evaluate K means based on a metric for how well it performs for a later purpose
             - T-Shirts - pick number of t-shirt sizes you are interested in making
+
+2. Dimensionality Reduction
+    - Motivation I: Data Compression
+        - Introduction
+            - Unsupervised Learning Algorithms
+            - Allows for Data Compressions
+        - Dimensionality Reduction
+            - Action - reduce data from Higher Dimension to Lower Dimension
+            - Example - Reduction from 2D to 1D
+                - Two features - feet and inches - reduce to one
+                - Take x1 feet and x2 inches and produce a single z1, z2, ..., zn
+            - Example - Reduction from 3D to 2D
+                - Three Features - x1, x2, x3 to z1 and z2
+    - Motivation II: Data Visualization
+        - Example - Reduce from 50D to 2D
+        - Goal - Reduce from n to K i.e. <= 3 or 2
+
+3. Principal Component Analysis
+    - Formulation Principal Component Analysis (PCA)
+        - Example 2D to 1D
+            - Goal - minimize sum of squared differences
+            - Action - find line (vector) onto to which to project the data so as to minimize the projection error
+            - More General Action - find k vectors onto which to project the data so as to mimimize the projection error
+        - PCA vs Linear Regression
+            - Linear Regression - fitting straight line, minimize standard error (vertical lines), predict continuous value
+            - PCA - fitting straight line, minimize projection error (perpendicular lines), no trying to predict value
+    - Algorithm Principal Component Analysis
+        - Data Preprocessing Step - perform feature scaling/mean normalization first
+            - Compute mean of each feature, replace value of feature with xi - meani
+        - Actions
+            - Reduce from n dimensions to k dimensions
+            - Compute Covariance (Sigma is same as summation....)
+            - Compute "eigenvectors" of matrix Sigma
+                - [U, S, V] = svd(Sigma) - singular value decomposition - NxN matrix
+                - U Matrix - NxN matrix - each column is a u-vector we are looking for, take first k vectors we are looking for
+                - Vectorized - (1/m) * XTranspose * X
+            - Find Lower Dimensional Representation
+                - Take first k columns - matrix Ureduce
+                - Z = uReduce matrix Transpose x X - produces Kx1 matrix z
+
+4. Applying PCA
+    - Reconstruction from Compressed Representation
+        - Xapprox = Ureduce * Z
