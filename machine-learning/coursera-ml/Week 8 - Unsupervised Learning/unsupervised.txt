@@ -96,3 +96,33 @@ Unsupervised Learning
 4. Applying PCA
     - Reconstruction from Compressed Representation
         - Xapprox = Ureduce * Z
+    - Choosing the Number of Principal Components k
+        - PCA trys to minimize average square projection error
+        - Variation data - how far on average are my training examples from the origin
+        - Formula - Average Distance Between X and its projections divided by the total variation of the data
+        - Focus is having 99% of the variance retained - less than 0.01
+        - You can often reduce the dimensionality significantly and still retain target variance
+    - Implementation
+        - Try PCA k - 1
+        - Compute Ureduce
+        - Check % of Variance
+        - If Good, done, else increment k++
+    - When computing PCA - when calling svd to get U,S,V, S is a square matrix that is diagonal only values
+        - You can use S to easily compute variance
+        - Pick smallest k for which formula is greater than or equal to .99
+    - Advice for Applying PCA
+        - Supervised Learning Speedup
+            - Reduce Dimension of Data to Help Algorithms Run More Quickly
+            - Process
+                - Extract X's the inputs to get an unlabeled training set
+                - Apply PCA to get reduced dimension representation of the data and new data set
+                - Take reduced dimension trading set and provide it to learning algorithm to produce hypothesis
+            - PCA - ultimately defining a mapping from x to z. This should only be done on the training set
+        - Visualization - Choose K 2 or 3 and reduce to visualize easily
+        - Misuse of PCA - Try to use it to prevent overfitting
+        - Misuse of PCA - Is PCA necessary right away? Should try without first
+            - Common ML Design
+                - Training Set
+                - Run PCA to Reduce
+                - Train Logistic Regression
+                - Train on Test Step
