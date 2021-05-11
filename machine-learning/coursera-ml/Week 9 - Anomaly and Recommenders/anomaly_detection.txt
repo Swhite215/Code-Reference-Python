@@ -1,0 +1,54 @@
+Anomaly Detection
+
+1. Density Estimation
+    - Problem Motivation
+        - Can we predict whether something is anomalous?
+        - Formally: given dataset, these examples are normal, is new example anomalous?
+        - Action
+            - Build a model for the probability of x
+            - If P(x) test < Epsilon -> flag as anomaly
+            - If P(x) test >= Epsilon -> OK
+            - Density - high to low expanding circle
+        - Examples
+            - Fraud Detection
+            - Manufacturing Errors
+            - Monitoring Computers in Data Centers
+                - Features of Each Machine
+                    - Memory Use, Disk Access, CPU Load, Network Traffice
+                - Model p(x) of unusual behavior of machine
+    - Gaussian Distribution
+        - If x is a distributed Gaussian with mean u, and variance sigma^2, then plotted it looks like a bell shape curve
+        - Gaussian Formula - look it up
+        - Mu - center of gaussian distribution, variance - low, tall curve, high, wide curve
+    - Anomaly Detection Algorithm
+        - Assume - x is distributed according to Gaussian distribution with some mu and variance
+        - For each training example, separate mu and variance parameters
+        - P(x) - Product of j=1 to n of p(xj, muj, variance^2j)
+        - Steps
+            - Choose features that might be indicative of anomalous examples
+            - Fit parameters mu and variance
+            - Give new example, compute p(x) - Gaussian Formula
+            - Anomalyu if p(x) < epsilon
+
+2. Building an Anomaly Detection System
+    - Developing and Evaluating an Anomaly Detection System
+        - Importance of Real Number Evaluation - when developing an algorithm, make decisions is much easier if we have a way of evaluating our learning algorithm
+        - Assume we have labeleed data, y = 0 if normal, y = 1 if anomalous
+        - Training Set - assume normal examples/not anomalous
+        - Cross Validation Set - (Xcv, Ycv)
+        - Test Set - (Xtest, YTest)
+        - Example
+            - 10000 good normal engines (normal)
+            - 20 flawed engines (anomalous)
+            - Training Set - 6000 good engines
+            - CV - 2000 good engines, 10 anomalous
+            - Test Set - 2000 good engines, 10 anomalous
+        - Algorithm Evaluation
+            - Fit model p(x) on training set
+            - On cross validation/test example x, predict
+                - y = 1, if p(x) < epsilon = anomaly
+                - y = 0, if p(x) >= epsilon = normal
+            - Possible Evaluation Metrics
+                - True Positive, False Positive, False Negative, True Negative
+                - Precision/Recall
+                - F1 Score
