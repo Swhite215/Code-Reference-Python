@@ -52,3 +52,52 @@ Anomaly Detection
                 - True Positive, False Positive, False Negative, True Negative
                 - Precision/Recall
                 - F1 Score
+    - Anomaly Detection vs. Supervised Learning
+        - Anomaly Detection
+            - Very small number of positive (anomalous) examples
+            - Large number of negative (normal) examples
+            - Many different types of anomalies
+            - Examples
+                - Fraud Detection
+                - Manufacturing
+                - Monitoring Machines in a Data Center
+        - Supervised Learning
+            - Large number of positive and negative examples
+            - Enough positive examples for algorithm to get a sense of what positive example are like, future examples likely to be similar to ones in training set
+            - Examples
+                - Email Spam Classification
+                - Weather Prediction
+                - Cancer Classification
+    - Choosing What Features to Use
+        - Action - plot data to confirm data is roughly gaussian
+        - Action - take log transformation, log(x + c), sqrt(x), etc. to make it look more gaussian
+        - Error Analysis Procedure
+            - Want p(x) large for normal examples x
+            - Want p(x) small for anomalous examples x
+            - Most Common Problem - p(x) is comparable (say, both large) for normal and anomalous examples
+        - Choosing Features
+            - choose what might take on unusually large or small values in the event of a anomaly
+                - Memory use of computer
+                - Number of disk access/sec
+                - CPU load
+                - Network traffic
+                - New - CPU load / network traffic
+
+3. Multivariate Gaussian Distribution
+    - Multivariate Gaussian Distribution
+        - Model p(x), all of it, in one go
+            - mu vector and covariance matrix sigma
+            - Shrinking sigma, decreases width and increases height
+            - Decreasing sigma, increases width and decreases height
+    - Anomaly Detection Using the Multivariate Gaussian Distribution
+        - Fit model p(x) by setting mu and sigma
+        - Given a new example x, compute p(x)
+        - Flag anomaly if p(x) < epsilon
+    - Insight
+        - Original Model - have to manually create features to capture anomalies where x1, x2 take unusual combination of values
+            - Computationally cheaper
+            - OK even if m training set is small
+        - Multivariate Gaussian - automatically captures correlations between features
+            - Computationally more expensive
+            - Must have traing examples > featuresd, or else sigma is non-invertible
+    
