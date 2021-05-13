@@ -1,0 +1,45 @@
+Recommender Systems
+
+1. Predicting Movie Ratings
+    - Problem Formulation
+        - Example - Predicting Movie Ratings
+            - Users rate zero to five stars
+            - Nu - number of users
+            - Nm - number of movies
+            - R(i,j) = 1 if user j has rated movie i
+            - Y^(i,j) - rating given by user j to movie i
+        - Given data set, look at data and try to predict missing movie rating
+    - Content Based Recommender Systems
+        - Xn - additional features 0-1 category of movie
+        - Each movie can be represented as a feature vector [X0, X1, X2] - [1, 0.9, 0]
+        - Option - treat predicting value for each user's missing movie rating as a linear regression problem, using individual functions for each user
+        - Optmization Object - learning_thetaJ.png
+        - Gradient Descent Updates - gradient_descent_recommender.png
+
+2. Collaborative Filtering - Non-Content Based/No Feature Solution
+    - Collaborative Filtering
+        - Feature Learning - starts to learn for itself what features to use
+        - Problem Motivation - having someone assign percentage scores for features for every movie
+        - We have dataset, but no idea with feature percentage score
+        - We have gone to users, and received a score as to how much they like romance vs action
+        - What feature vector should X1 be, so preference vectors of users is value they indicated
+        - Optimization Algorithm
+            - We know user preference
+            - We want to learn feature x vector
+            - We want to minimize squared error of predicted user rating vs. actual rating
+    - Collaborative Filtering Algorithm
+        - Given theta, estimate feature values
+        - Given feature values, estimate theta
+        - Action: simultaneously minimize feature values and theta values
+        - Process
+            - Initialize x and theta to small random values
+            - Minimize cost function using gradient descent for every j=i to n, i = 1 to n
+            - For a usaer with parameters theta and a movie with learned features x, predict a rating of thetaTranspose X
+
+3. Low Rank Matrix Factorization
+    - Vectorization: Low Rank Matrix Factorization
+        - Take ratings of all users and group into a matrix Y
+        - Predicted Ratings - matrix of THETAiTransposeXi
+        - X Matrix is X Transpose
+        - Theta Matrix is Theta Transpose
+        - Find Related Movies  - Netflix
