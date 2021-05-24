@@ -1,0 +1,38 @@
+Large Datasets
+
+1. Gradient Descent with Large Datasets
+    - Learning with Large Datasets
+        - Why - high performance when you take a low-bias learning algorithm and train it with a lot of data
+        - It is not who has the best algoritm, it is who has the most data
+        - Example
+            - Training Set - 100,000,000 million examples
+            - Training Logistic Regression - Summation of 100,000,000 example....
+            - Action - train on smaller number of examples
+    - Stochastic Gradient Descent - Look at single example
+        - Cost - 1/2 squared error of single example
+        - Rewrite JTrain
+        - Steps
+            - Randomly shuffle the dataset
+            - Repeat for i = 1 through m
+                - Update thetaj = thetaj - alpha(difference) * Xi (single training example)
+        - Difference - focus on updating theta based on a single training example
+    - Batch Gradient Descent - Look at ALL Training Examples
+    - Mini-Batch Gradient Descent - Use b examples in each iteration (b = 2 - 100)
+        - Likely to outperform Stochastic if you have a good vectorization
+    - Stochastic Gradient Descent Convergence - Close to but not absolute minimum
+        - Checking for Convergence
+            - Plot jTrain as a number of iterations of gradient descent, check to confirm decreasing
+        - Stochastic Check
+            - Compute cost before updating theta
+            - Plots
+                - Cost decrease but noisy - increase samples
+                - Cost increase - decrease alpha
+        - Action - slowly decrease alpha learning rate over time - const1 / iterations + const2
+            - This could lead to identifying global minimum/convergence
+
+2. Advanced Topics
+    - Online Learning - allows us to model problems with a continuous stream of incoming data
+        - Repeat Forever
+            - (x, y) pair corresponding to user on website, x is features and price, and y is eitehr 1 or 0 depending on if they used our servicve or not
+            - Theta is then updated using the example (x, y)
+        - Predicted Click-Through Rate
