@@ -1,0 +1,27 @@
+Photo OCR
+
+1. Photo OCR
+    - Problem Description and Pipeline
+        - Photo Optical Character Recognition - (Difficult)
+        - Actions/OCR Pipeline
+            - Identify Text
+            - Character Segmentation
+            - Character Classification
+    - Sliding Windows
+        - Detection
+            - Pedestrian Detection - find individual pedestrians in the image. easier due to aspect ration height x width ration
+                - Select aspect ratio
+                - Collect training set of positive and negative examples
+                - Sliding Window Detection
+                    - Take rectangular patch, run through classifier
+                    - Slide patch to the left, run through classifier
+                    - Amount shifting - called stepsize or stride
+                    - Increase patch size, take image, resize image, pass through classifier
+            - Text Detection
+                - Collect training set of positive and negative examples
+                - Sliding Window Detection - identify regions where possible text
+                - Apply Expansion Operator - takes region image and expands white region of possible text
+                - Eliminate Areas
+                - Draw Bounding Boxes
+                - Sliding Window Detection - Character Segmentation - Identify Splits Between Chars
+    - Getting Lots of Data and Artificial Data
