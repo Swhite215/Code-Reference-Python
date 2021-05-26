@@ -36,3 +36,11 @@ Large Datasets
             - (x, y) pair corresponding to user on website, x is features and price, and y is eitehr 1 or 0 depending on if they used our servicve or not
             - Theta is then updated using the example (x, y)
         - Predicted Click-Through Rate
+    - Map Reduce and Data Parallelism
+        - Issue - need more than one machine to compute on data, scaling issue
+        - Action
+            - Batch Gradient Descent - ~400,000,00 examples
+            - Machine 1 - Compute temp summation for 1-100,000,000 examples
+            - Machine N - Compute temp summation for 100,000,00 examples
+            - Take temp variables and combine the results together, update thetaj
+        - Training Set -> Split Equally into N Subsets -> Send each subset to a computer/core -> Combine results
