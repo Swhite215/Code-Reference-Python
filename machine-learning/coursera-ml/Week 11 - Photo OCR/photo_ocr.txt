@@ -25,3 +25,21 @@ Photo OCR
                 - Draw Bounding Boxes
                 - Sliding Window Detection - Character Segmentation - Identify Splits Between Chars
     - Getting Lots of Data and Artificial Data
+        - Artificial Data Synthesis
+            - Create New Data - e.g. find characters from different font sets and place on varying backgrounds
+            - Amplify Small Training Set - e.g. introduce distortions to original data - audio, visual, etc.
+                - Issues - distortion should be representative of the type of distortion in the dataset
+                - Usually does not help to add purely random/meaningless noise to your data
+        - Getting More Date
+            - Make sure you have a low bias classifier before expending the effort i.e. plot learning curves
+            - Ask - How much work would it be to get 10x as much data as we currently have?
+                - Aritifical data synthesis
+                - Collect/label it yourself
+                - Crowd Source
+    - Ceiling Analysis - What Part of the Pipeline to Work on Next
+        - Photo OCR Pipeline - Image -> Text Detection -> Character Segmentation -> Character Recognition
+        - Question - What part of the pipeline should you spend the most time trying to improve?
+        - Idea
+            - #1 - generate single metric e.g. overall system accuracy
+            - #2 - monkey around in test set, manually tell algorithm where text is, simulate 100% accuracy
+            - #3 - run modified data through pipeline and measure single metric, compare to original metric
