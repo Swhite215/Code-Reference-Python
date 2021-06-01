@@ -2,7 +2,7 @@ Logistic Regression
 
 1. Logistic Regression Concepts
     - Classification (Binary Classification)
-        - Goal - variable y that you want to predict is discrete valued i.e 0 or 1
+        - Goal - variable y that you want to predict is discrete value i.e 0 or 1
         - Examples
             - Email - spam/not spam
             - Online Transactions - fraudulent Y/N

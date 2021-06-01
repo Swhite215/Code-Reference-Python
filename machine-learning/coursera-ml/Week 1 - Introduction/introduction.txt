@@ -6,13 +6,13 @@ Introduction to Machine Learning Videos
         - Example - Classifying Emails
             - Task - classifying email
             - Experience - watching emails being labeled
-            - Performance - fraction of emails correctly classified as spam or not spame
+            - Performance - fraction of emails correctly classified as spam or not spam
     - Machine Learning Algorithms
-        - Supervised Learning - teach computer how to do system
-        - Unsupervised Learning - let computer learn by itself
+        - Supervised Learning - teach computer how to do based on labeled data
+        - Unsupervised Learning - let computer learn by itself, unlabeled data
         - Reinforcement Learning
         - Recommender Systems
-    - Practical Experience - Best Advice|
+    - Practical Experience - Best Advice
 
 2. Supervised Learning
     - Essence - algorithm is provided dataset(s) with "right answers" given
@@ -50,7 +50,7 @@ Introduction to Machine Learning Videos
         - Goal - Identify cohesive groups based on social connections
         - Type - clustering
     - Example - Market Segmentation
-        - Goal - Discover market segments and groups based on market activity\
+        - Goal - Discover market segments and groups based on market activity
         - Type - clustering
     - Example- Astronomical Data
         - Goal - Learn about formations of galleries
@@ -69,7 +69,7 @@ Introduction to Machine Learning Videos
             - Training Set - Algorithm - Model h, h maps from x (size in feet) to y (estimated price)
             - How do we represent h? h₀(x) = θ₀ + θ₁x
         - Example
-            - Goal - Predict housing prices based on sizein square feet
+            - Goal - Predict housing prices based on size in square feet
             - Learning - Supervised
             - Problem - regression problem i.e. predict a continuous valued input
             - Training Set - dataset of different housing prices
@@ -80,10 +80,10 @@ Introduction to Machine Learning Videos
             - If θ₀ = 1.5 and θ₁ = 0, hypothesis is straight line at 1.5
             - If θ₀ = 0 and θ₁ = 0.5, hypothesis is line with slope of 0.5
             - If θ₀ = 1 and θ₁ = 0.5, hypothesis is line with slop of 0.5 and y intercept of 1
-            - Choose θ₀and θ₁ so that h(x) is close to y for our training examples
+            - Choose θ₀ and θ₁ so that h(x) is close to y for our training examples
         - Squared Error Cost Function
         - Goal - minimize J(θ₀, θ₁)
-    - Cost Function - Intuition I - Simplied
+    - Cost Function - Intuition I - Simplified
         - h(x) is hypothesis, a function of x
         - J(θ₁) is a function of θ₁
     - Cost Function - Intuition II

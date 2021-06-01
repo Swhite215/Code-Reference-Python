@@ -3,7 +3,7 @@ Multivariate Linear Regression
 1. Multivariate Linear Regression
     - Multiple Features
         - Example - house price based on number of bedrooms, age of house, size of home
-        -  Terms
+        - Terms
             - m - number of rows
             - n - number of features
             - Xᵢ - feature
