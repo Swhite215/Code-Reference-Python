@@ -15,7 +15,7 @@ Neural Networks - Learning
     - Implementation Note: Unrolling Parameters
         - Have Initial Theta Parameters - Theta1, Theta2, Theta3
         - Unroll to get Initial Theta to pass to fminunc(@costfunction, initialTheta)
-        - From ThetaVec, get back Theta1, Theta2, Theta2
+        - From ThetaVec, get back Theta1, Theta2, Theta3
         - Use Forward/Back Propogation to compute Derivatives and Cost Function J(Theta)
         - Take Derivatives and Unroll to get gradientVec
     - Gradient Checking
@@ -38,6 +38,6 @@ Neural Networks - Learning
             - Implement forward propogation to get h(x) for any x
             - Implement code to compute cost function
             - Implement backprop to compute partial derivatives
-            - Use gradient checking to compare partial derivatives produces using backprop vs. numerical estimate of gradient
+            - Use gradient checking to compare partial derivatives produced using backprop vs. numerical estimate of gradient
             - Disable gradient checking code
             - Use gradient descent or advanced optimization method with backprop to try to minimize cost function as a function of parameters theta

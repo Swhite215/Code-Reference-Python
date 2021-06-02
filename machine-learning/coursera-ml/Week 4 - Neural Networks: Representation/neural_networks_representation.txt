@@ -6,7 +6,7 @@ Neural Networks - Representation
             - Logistic Regression w/ Non-Linear Features
                 - Works well with low number of features
         - Example - Determining Image Category
-        - Issue - Learning Complexity Non-Linear Hypotheses with High Number of Features
+        - Issue - Learning Complex Non-Linear Hypotheses with High Number of Features
     - Neurons and the Brain
         - Origins - algorithms trying to mimic the brain, widely used in 80s and 90s, began to diminish, recent resurgence
         - One Learning Algorithm Hypothesis - Neuro-rewiring

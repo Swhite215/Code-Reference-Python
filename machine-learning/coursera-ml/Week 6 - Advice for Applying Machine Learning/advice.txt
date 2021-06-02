@@ -1,7 +1,7 @@
 Machine Learning Advice
 
 1. Evaluating a Learning Algorithm
-    - Deciding What to Try Nexts
+    - Deciding What to Try Next
         - Situation - linear regression making error in predicting housing prices
         - Actions
             - Obtain more training examples
@@ -25,7 +25,7 @@ Machine Learning Advice
                 - Learn parameters theta from training set of 70-80%
                 - Compute test set error, take learned theta and plug into test set cost function
                 - Misclassification error (0/1 missclassification error)
-                    - if h(x) >= 0.5 and y = 0 m - ERROR
+                    - if h(x) >= 0.5 and y = 0 - ERROR
                     - if h(x) < 0.5 and y = 1 - ERROR
                     - 0 if correct
         - IMPORTANT - performance on training set doesnt necessarily correctly estimate with new data
@@ -84,13 +84,13 @@ Machine Learning Advice
             - Insight - if a learning algorithm is suffering from high bias, getting more training data will not by itself help much
             - High Variance - as training set size grows, train error increases, cross validation error decreases but remains high
             - Insight - if a learning algorithm is suffering from high variance, getting more training data is likely to help
-    - Deciding What to Do Nextw
+    - Deciding What to Do Next
         - Issue - Regularized Linear Regression fails to predict
         - Actions
             - Get more training examples - useful if high variance (cross validation error > training set error)
-            - Try smallest set of features - useful if high variance
+            - Try smaller set of features - useful if high variance
             - Try getting additional features - use if high bias
-            - Try adding polynomial featurs - use if high bias
+            - Try adding polynomial features - use if high bias
             - Try decreasing lambda - fixes high bias
             - Try increasing lambda - fixes high variance
         - Relating to Neural Networks
@@ -122,7 +122,7 @@ Machine Learning Advice
         - False Positive - Actual = 0 and Predicted = 1
         - False Negative - Actual = 1 and Predicted = 0
         - True Negative - Actual = 0 and Predicted = 0
-        - Precision - True Positives / Predicted Positives (Sum of True Positive and False Positive) - High Precision means low false positives, clsoe to 1
+        - Precision - True Positives / Predicted Positives (Sum of True Positive and False Positive) - High Precision means low false positives, close to 1
         - Recall - True Positives / Actual Positives (Sum of True Positives and False Negatives)
         - Using Precision and Recall - High both suggests algorithm is doing well even if we have skewed classes
     - Trading Precision and Recall
