@@ -63,6 +63,7 @@ Udacity Lesson 02 Naive Bayes
     - Issue - overfit to training data, should be able to generalize new data
 
 13. Unpacking NB Using Bayes Rule
+    - 3Blue1Brown - Evidence should update your beliefs, not determine them
 
 14. Bayes Rule - Holy Grail of Probabilistic Inference
     - Cancer Test
@@ -71,3 +72,52 @@ Udacity Lesson 02 Naive Bayes
         - Test - 90% negative if you don't have C - specitivity
         - Question - Positive Test - Probability you have cancer
         - Look at Positive Circle, then ratio of Cancerous to Entire Region
+
+15. Prior and Posterior
+    - Prior - probability before test
+    - Test Evidence
+    - Posterior - probability post test
+    - Cancer
+        - Prior P(C) = 0.01
+        - Prior P(-C) = .99
+        - P(Pos | C) = .90
+        - Posterior P(C | Pos) = P(C) * P(Pos | C)
+        - Posterior P(-C | Post) = P(-C) * P(Pos | -C)
+
+16. Bayes Rule Diagram
+    - P(C)
+    - P(Pos | C) - sensitivity
+    - P(Neg | -C) - specivity
+
+17. Bayes Rule for Classification
+    - Text Learning - Naive Bayes
+        - Chris Emails - 80% Deal, 10% Love, 10% Life
+        - Sara Emails - 20% Deal, 50% Love, 30% Life 
+        - Words - Love, Deal, Life
+        - Action - determine who sent this email
+            - Who sent Love Life?
+            - P(Chris) = 0.5
+            - P(Sara) = 0.5
+        - Action - determine who sent this email
+            - Who sent Life Deal
+            - P(Chris) = .1 * .8 * .5 = 0.04
+            - P(Sara) = .3 * .2 * .5 = 0.03
+
+18. Posterior Probability
+    - Prior - P(C) and P(S) = 0.5
+    - P(C SAID "Life Deal") = Probability of Life (L) * Probability of Deal (D) * Probability Chris Said Something(C)
+        - P(C SAID "Life Deal) = .1 * .8 * .5 = 0.04
+    - P(S SAID "Life Deal") = Probability of Life (L) * Probability of Deal (D) * Probability Sara Said Something(S)
+        - P(C SAID "Life Deal) = .3 * .2 * .5 = 0.03
+    - P(Chris GIVEN "Life Deal") = P(C SAID "Life Deal") / P(Total Probability Life Deal Was Said) = .04 / 04 + .03 or .04 / 07
+    - P(Sara GIVEN "Life Deal") = P(S SAID "Life Deal") / P(Total Probability Life Deal Was Said) = .03 / 04 + .03 or .03 / 07
+
+19. Why is Naive Bayes Naive?
+    - Word Use Case - Word order does NOT matter
+
+20. Naive Bayes Strengths and Weaknesses
+    - Strenths
+        - Easy to implement with big feature spaces
+        - Efficient
+    - Weaknesses
+        - Can break in funny ways - chicago bulls example - phrases with distinct meaning becomes difficult
