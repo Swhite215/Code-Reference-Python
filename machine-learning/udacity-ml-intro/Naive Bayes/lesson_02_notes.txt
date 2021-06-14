@@ -121,3 +121,6 @@ Udacity Lesson 02 Naive Bayes
         - Efficient
     - Weaknesses
         - Can break in funny ways - chicago bulls example - phrases with distinct meaning becomes difficult
+
+21. Mini Project
+    - Objective - identify the author of a particular email - Chris or Sarah
