@@ -1,0 +1,51 @@
+Udacity Lesson 03 Support Vector Machines
+
+1. SVM - Support Vector Machines
+    - Do - Find separating line/hyperplane of data of different classes
+    - Choosing Between Separate Lines
+
+2. What Makes a Good Separating Line
+    - Goal - action that maximizes the distance, margin, between the line and the points of classes
+    - Question - perpendicular or just intersecting?
+
+3. SVM and Tricky Data Distributions
+    - SVM - puts correct classification first, and subject to that constraint, maximize the margin
+
+4. SVM Response to Outliers
+    - Options
+        - Give Up
+        - Say Something Random
+        - Do the Best it Can - X
+
+5. SVM in SKLearn
+    - Produce a decision boundary that maximizes the margin between the decision boundary and the points on either side/class
+
+6. Nonlinear Data
+    - Currently we have no solution for non-linear
+    - SVM is capable of dealing with non-linear data
+    - If x, y, use x^2 + y^2 feature
+
+7. Visualizing New Feature - z
+    - z = x^2 + y^2 - alwways non-negative, surrounds inner group and separates from outer group
+    - X has small value of z, i.e. small radius
+    - Y has large value of z, i.e. large radius
+
+8. Predicting Making a New Feature
+    - x^2 + x + c
+    - |x|
+
+9. Kernel Trick
+    - What - functions that take low dimensional feature space, and map to high dimensional space - taking not separable and changing to separable
+    - Take solution and go back to original dimensional space
+
+10. Playing Around with Kernel Choices
+    - linear
+    - polynomial
+    - rbf (radial basis function)
+    - sigmoid
+
+11. Parameters in Machine Learning
+    - Paramaters - arguments passed when creating classifier
+        - Kernel - linear, rbf
+        - C - 
+        - Gamma - 
