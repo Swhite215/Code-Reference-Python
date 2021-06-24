@@ -1,0 +1,33 @@
+Udacity Lesson 04 Decision Trees
+
+1. Decision Trees
+    - Trick, non-linear decision making with simple linear decision surfaces
+    - Allow you to ask multiple linear questions one after another
+        - Question #1 - First ask if it is windy
+        - Question #2 - Second ask if it is sunny
+
+2. Constructing a Decision Tree - First Split
+    - Axis Parallel Decision Lines - runs parallel to the axis and look at one variable at a time
+
+3. Coding a Decision Tree - Classify_Decision_Tree.py
+    - Shape - staggered stair step
+    - Signs of overfitting - long slices and islands
+
+4. Decision Tree Parameters
+    - min_samples_split - governs whether you keep splitting based on sample number
+
+5. Decision Tree Accuracy - Decision_Tree_Accuracy.py
+
+6. Data Impurity and Entropy
+    - Entropy - controls how a DT decides where to split the data
+    - Definition - measure of impurity in a bunch of examples
+    - Minimizing impurity in split
+
+7. Formula of Entropy
+    - All same class - entropy 0
+    - Samples perfectly split - entropy 1.0
+
+8. Information Gain
+    - Entropy of the parent minus the weighted average of the entroy of the children if you split
+    - Decision Tree will maximize the information gain
+    - 
