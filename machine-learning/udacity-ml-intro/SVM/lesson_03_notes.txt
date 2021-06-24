@@ -47,5 +47,15 @@ Udacity Lesson 03 Support Vector Machines
 11. Parameters in Machine Learning
     - Paramaters - arguments passed when creating classifier
         - Kernel - linear, rbf
-        - C - 
-        - Gamma - 
+        - C - controls tradeoff between smooth decision boundary and one classifying training points correctly, large C = intricate boundaries, small C = smooth boundary
+        - Gamma - defines how far the influence of a single training example reaches, low values = far, high values = close
+            - high gamma, decision boundary more influenced by values close to it
+            - low gamma, decision boundary more influenced by all values
+
+12. Overfitting
+    - Decision Boundary is too complicated, serious problem
+    - All values, kernel, c, and gamma can together reduce overfitting, this is the artistry
+
+13. SVM Strengths and Weaknesses
+    - Strength - complicated domain where there is a clear margin of separation
+    - Weakness - large datasetss, slow to train compared to Naive Bayes
