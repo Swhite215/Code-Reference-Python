@@ -1,0 +1,16 @@
+Udacity Lesson 06 Datasets and Questions
+
+1. What is a POI?
+    - Person of Interest
+        - Indicted
+        - Settled without admitting guilt
+        - Testified in exchange for immunity
+    
+2. Accuracy vs. Training Set Size
+    - General - more data > fine tuned algorithm
+
+3. Types of Data
+    - Numerical
+    - Categorical - limited number of discrete values
+    - Time Series - temporal values e.g. data and timestamp
+    - Text - words
