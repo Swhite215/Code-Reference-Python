@@ -30,4 +30,15 @@ Udacity Lesson 04 Decision Trees
 8. Information Gain
     - Entropy of the parent minus the weighted average of the entroy of the children if you split
     - Decision Tree will maximize the information gain
-    - 
+
+9. Turing Criteriion Parameter
+    - criterion is tunable parameter e.g. gini or entropy (information gain)
+
+10. Bias-Variance Dilemma
+    - High Bias - practically ignores the data
+    - High Variance - extremelly recepetive to data, can only replicate what you have seen before
+    - Balance Bias and Variance - algorithm with some authority to generalize, but also responsive to data
+
+11. DT Strengths and Weaknesses
+    - Strengths - easy to use, graphical interpretation, can build bigger classifiers out of decision trees using ensemble methods
+    - Weaknesses - prone to overfitting
