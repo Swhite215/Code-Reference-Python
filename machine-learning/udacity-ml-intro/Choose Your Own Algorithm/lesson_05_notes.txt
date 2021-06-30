@@ -1,0 +1,13 @@
+Udacity Lesson 05 Choose Your Own Algorithm
+
+1. Algorithm Options
+    - K nearest neighbors - classic, simple, easy to understand
+    - Adaboost - ensemble method (meta classifier built from decision tree)
+    - Random forest - ensemble method (meta classifier built from decision tree)
+
+2. Process
+    - Do some research on the algorithm - general understanding
+    - Find sklearn documentation for algorithm
+    - Deploy the algorithm - get your hands dirty
+    - Use it to make predictions
+    - Evaluate accuracy of classifier
