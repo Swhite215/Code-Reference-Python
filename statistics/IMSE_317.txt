@@ -1,0 +1,29 @@
+Engineering Probability and Statistics
+
+1. Descriptive Statistics
+    a. Population, Sample, Variable
+        - Population - a collection of objects of interest in a study
+            - Study is which candidate will win an election, population is everyone planning and eligible to vote
+            - Study is defect rate of cellphone screen, population is all cellphone screens
+        - Sample a subset of the population selected by a defined procedure
+            - Study is which candidate will will an election, sample is 500 voters contacted by telephone
+        - Variable - a characteristics of interest for the elements
+        - Discrete Variables - variables that take finite or countably infinite values
+            - Number of rooms in a house
+        - Continuous Variables - variable that takes infinitely many uncountable values
+            - Size, price
+        - Univariate vs. Multivariate
+            - Univariate - single variable
+            - Multivariate - multiple variables
+    b. Four Levels of Measurement
+    c. Graphical Integrity
+    d. Measures of Location
+    e. Measures of Variability
+    f. Data Visualzation
+
+2. Probability
+    a. Sample Space, Events
+    b. Set Operations
+    c. Probability Axioms
+    d. Product Rule
+    e. Permuation
