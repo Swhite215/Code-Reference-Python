@@ -31,9 +31,31 @@ Engineering Probability and Statistics
     c. Graphical Integrity
         - The Principle of Proportional Ink - the representation of numbers, as physically measureed on the surface of the graphic itself i.e. the amount of ink used, should be directly proportional to the numerical quantities represented
     d. Measures of Location
+        - Goal - the measure of the center of the date
+        - Sample Mean - sensitive to outliers
+        - Sample Median - middle value
+        - Quartile/Percentile - seperating bottom nths data from top 1-nth data
+        - Trimmed Mean - mean after discarding the smallest and largest a% of data
+        - Box Plot - smallest, first quartile, median or second quartile, third quartile, largest data
+        - Descriptive Statistics with Python
     e. Measures of Variability
+        - Goal - the measure of the spread of the data
+        - Range - difference between largest and smallest value and is sensitive to outliers
+        - Interquartile Range - third quartile - first quartile
+        - Deviations from the mean
+            - Average Deviation - sum of all deviations is always zero so does not work
+            - Absolute Deviation - prevents a problem with differentiation at values of zero
+            - Squared Deviation - preferred approach with smooth graph
+        - Sample Variance - sum of squared differences / n - 1
+        - Sample Standard Deviation - square root of sample variance
+        - Why divided by n-1? Degree of freedom, -1 to account for issue with average deviation
+        - Properties
+            - #1 - adding a constant to the data would shift the distribution right or left without changing the shape
+            - #2 - multiplying a constant with the data would scale the distribution by that factor
     f. Data Visualzation
-
+        - Graphics reveal data
+        - Anscombe's Quartet demonstrates this perfectly
+        - Historgram - relative frequency = frequency / total # of data points
 2. Probability
     a. Sample Space, Events
     b. Set Operations
