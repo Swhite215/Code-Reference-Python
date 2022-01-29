@@ -16,7 +16,20 @@ Engineering Probability and Statistics
             - Univariate - single variable
             - Multivariate - multiple variables
     b. Four Levels of Measurement
+        - Nominal - categorical - names or lables that have no order
+            - Country Code, Marital Status, Social Security Number
+            - Only math operations are = and !=
+        - Ordinal - ranking relationship, go into an order
+            - First, Second, Third, Fourth, Stars
+            - Math operations include =, !=, <, >
+        - Interval - zero is arbitrary, distance between tells us something
+            - Date, temperature, GPS coordinates, heading
+            - Math Operations - =, !=, <, >, -
+        - Ratio - zero is genuine i.e. there is none of what is being measured
+            - Dollars, age, speed, length, weight, time duration
+            - Math Operations - =, !=, <, >, -, /
     c. Graphical Integrity
+        - The Principle of Proportional Ink - the representation of numbers, as physically measureed on the surface of the graphic itself i.e. the amount of ink used, should be directly proportional to the numerical quantities represented
     d. Measures of Location
     e. Measures of Variability
     f. Data Visualzation
