@@ -92,4 +92,13 @@ Engineering Probability and Statistics
         - Proofs - Notes
 
     d. Product Rule
+        - Discrete Probability Law - if sample space is finite, then the probability of any event P(E) = sum of probabilities of its elements
+        - Discrete Uniform Probability Law - if all outcomes are equally likely, then P(A) is the number of outcomes of A over the total number of outcomes in the sample space
+        - Examples
+            - Roll a die twice, how many pairs of numbers are possible? 6x6 = 36
+        - The Product Rule
+            - n1 results of the first step
+            - n2 results of the second step
+            - Total possible is n1xn2
+
     e. Permuation
