@@ -72,6 +72,17 @@ Engineering Probability and Statistics
             - Basketball player makes at least one free throw of two taken
 
     b. Set Operations
+        - Union - event consisting of all outcomes that are either in A or in B
+        - Intersection - event consisting of all outcomes that are in both A and B
+        - Commutative Property - A+B=B+A, A*B=B*A
+        - Associative Property - (A+B)+C=A+(B+C), (A*B)*C=A*(B*C)
+        - Distributive Property - (A+B)*C=(A*C)+(B*C)
+        - Mutually Exclusive or Disjoint Events
+        - Complement of An Event - The set of all outcomes that are not in A
+        - Subset - An event A is a subset of an event B if all outcomes in A are also outcomes in B
+        - DeMorgan's Law I - Not (A and B) is the same as Not A or Not B
+        - DeMorgan's Law II - Not (A or B) is the same as Not A and Not B.
+
     c. Probability Axioms
     d. Product Rule
     e. Permuation
