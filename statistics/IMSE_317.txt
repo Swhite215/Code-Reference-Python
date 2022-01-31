@@ -84,5 +84,12 @@ Engineering Probability and Statistics
         - DeMorgan's Law II - Not (A or B) is the same as Not A and Not B.
 
     c. Probability Axioms
+        - Probability - a number that encodes our knowledge or belief about the collective likelihood of the elements of A
+        - Axiom #1 - Non-Negativity - P(A) >= 0, for any event A
+        - Axiom #2 - Normalizations - P(Omega) = 1
+        - Axiom #3 - Additivity - if AnB = , then P(AuB) = P(A) + P(B)
+        - General Additivity - P(A) + P(B) + P(B)
+        - Proofs - Notes
+
     d. Product Rule
     e. Permuation
