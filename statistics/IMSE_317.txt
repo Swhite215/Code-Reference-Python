@@ -56,8 +56,21 @@ Engineering Probability and Statistics
         - Graphics reveal data
         - Anscombe's Quartet demonstrates this perfectly
         - Historgram - relative frequency = frequency / total # of data points
+
 2. Probability
     a. Sample Space, Events
+        - Sample Space - set that describes all possible outcomes in an experiment, it must be collectively exhaustive and mutually exclusive
+            - Flip a Coin Once - {H, T}
+            - Flip a Coin Twice - {H-H, T-T, H-T, T-H}
+        - Event - a collection of outcomes in the sample space or simply a subset of the sample space
+        - Simple Event - consists of a single outcome
+            - Roll two dice and the total is 12
+            - Basketball player takes and makes both free throws
+        - Compount Event - consists of multiple outcomes
+            - Roll two dice and get a duoble
+            - Roll a die and it lands on an odd number
+            - Basketball player makes at least one free throw of two taken
+
     b. Set Operations
     c. Probability Axioms
     d. Product Rule
