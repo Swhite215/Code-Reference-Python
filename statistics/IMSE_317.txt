@@ -129,9 +129,32 @@ Engineering Probability and Statistics
             - Goal - in a round robin tennis tournament with n players, each player meets every other player exactly once, how many games need to be played?
 
     g. Conditional Probability
+        - Simple Example
+            - D - Roll a die, told it landed on an odd, what is the probability it is less than 4?
+            - Action One - consider only odd
+            - Action Two - consider less than 4
+            - Answer - 2/3
+        - Equation - P(A|B) = P(A N B)/P(B)
+        - Simplify P(A|B)
+            - A and B are disjoint - 0
+            - A c B - P(A) / P(B)
+            - B c A - P(B) / P(B) = 1
+            - A = B - 1
+
     h. Multiplication Rule
+        - Start Equation - P(A|B) = P(A N B)/P(B)
+        - Derived - P(A N B) = P(B)* P(A|B)
+        - Additional - P(A n B n C) = P(A) * P(B|A) * P(C | A n B)
+
     i. Total Probability Theorem
-    j. Baye's Rule
+        - Partition - collection of events that are disjoint and their union is the set of all events
+        - A and A' always form a partition of sample space
+        - Theorem - B = (A1 n B) u (A2 n B) u ... u (An n B)
+
+    j. Baye's Theorem
+        - Conditional Probability - P(A|B) = P(AnB)/P(B)
+        - Multiplication Rule - P(AnB) = P(A)P(B|A)
+        - Bayes Theorem - P(A|B) = P(A)P(B|A)/P(B)
         - Video
             - When to Use
                 - You have a hypothesis, you observe some evident, and you want to know the probability your hypothesis is correct given the new evidence
@@ -156,6 +179,7 @@ Engineering Probability and Statistics
                     - *40 out of something is better at kicking are intuitions into gear than 40%
                     - Geometry is exceedingly helpful at visiualizations proportions, which is statitics
             - Evidence should not determine our beliefs, they should update them
+            
     k. Independence
 
 
