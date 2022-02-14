@@ -102,3 +102,60 @@ Engineering Probability and Statistics
             - Total possible is n1xn2
 
     e. Permuation
+        - Definition - to arrange in a different order, an ordering of distinguishable objects
+        - Simple Example
+            - Goal - rank two teams A and B
+            - Answer - Two - AB, BA
+        - Simple Example Two
+            - Goal - rank three teams A, B, and C
+            - Answer - Six - ABC, ACB, BCA, BAC, CBA, CAB
+        - Equation - n!/(n-k)!
+
+    f. Combination
+        - Simple Example
+            - Goal - choose 2 students from 5 to volunteer this weekend, how many possible ways to choose?
+            - Do this graphically!
+            - Answer - 10, order doesn't matter
+        - Definition - an unordered subet
+        - Simple Example Two
+            - Goal - Choose 3 students from 40 to form a committee, how many possible ways?
+            - Action One - How many ways to form the committee? 40!/(40-3)!
+            - Action Two - How many ways to order each chosen 3 students? 3 * 2 * 1 = 6 or 3! 
+            - Action Three - Divide ways by duplicates - 40!/(40-3)!3!
+        - Equation - n!/(n-k)!k!
+        - Property One
+            - (n CHOOSE k) = (n choose n-k)
+        - Example Three
+            - Goal - in a round robin tennis tournament with n players, each player meets every other player exactly once, how many games need to be played?
+
+    g. Conditional Probability
+    h. Multiplication Rule
+    i. Total Probability Theorem
+    j. Baye's Rule
+        - Video
+            - When to Use
+                - You have a hypothesis, you observe some evident, and you want to know the probability your hypothesis is correct given the new evidence
+                - Farming Example
+                    - Hypothesis - description of librarian
+                    - Prior - Probability Someone is a Librarian vs a Farmer 1/21
+                    - Likelihood - limit your view, consider portion of librarians that fit this description given the evidence
+                    - Consider probablity of seeing the evidence, given the hypothesis is not true
+                - P(H|E) = P(H)P(E|H) / P(E)
+                - Important to always consider case where hypothesis is true, and it isn't
+                - P(H|E) - Posterior, belief about the hypothesis after seeing the evidence
+                - Lets you quantity and systemize the idea of changing beliefs
+                - When you see evidence, the space of possibilites gets restricted. When likelihoods are different that is when your beliefs change it alot.
+                - Read it geometrically, area of hypothesis times evidence given the hypothesis
+            - Linda Example
+                - Description
+                - Options
+                    - Linda is a bank teller
+                    - Linda is a bank teller and is active in the feminist movement
+                    - Key Question without consideration for description, how likely is it a bank teller is a woman and is active in a feminist movement
+                    - Insight - option two is a subset and ultimately has to be smaller, bank teller is more statistically likely
+                    - *40 out of something is better at kicking are intuitions into gear than 40%
+                    - Geometry is exceedingly helpful at visiualizations proportions, which is statitics
+            - Evidence should not determine our beliefs, they should update them
+    k. Independence
+
+
