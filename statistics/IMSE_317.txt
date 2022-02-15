@@ -179,7 +179,29 @@ Engineering Probability and Statistics
                     - *40 out of something is better at kicking are intuitions into gear than 40%
                     - Geometry is exceedingly helpful at visiualizations proportions, which is statitics
             - Evidence should not determine our beliefs, they should update them
-            
+
     k. Independence
+        - Definition - not subject to control by others, not relying on something else
+        - Mathematical Definition - P(A|B) = P(A)
+        - Equation - P(A) = P(AnB)/P(B) or P(AnB) = P(A)P(B)
+        - Simple Example
+            - Roll a die twice, first roll lands on 3, second lands on 4, are A and B independent?
+            - Answer - yes
+        - Property - If A and B are independent, so are A and B'
+        - Independence of Three Events
+            - A and B are independent
+            - B and C are independent
+            - Are A And C independent? No
+        - Pairwise Independent
+            - A and B are independent - P(AnB) = P(A)P(B)
+            - B and C are independent - P(BnC) = P(B)P(C)
+            - C and A are independent - P(CnA) = P(C)P(A)
+            - What about P(AnBnC)?
+        - Mutually Independent
+            - P(AnB) = P(A)P(B)
+            - P(BnC) = P(B)P(C)
+            - P(CnA) = P(C)P(A)
+            - P(AnBnC) = P(A)P(B)P(C)
+        - Example Network Connectivity
 
 
